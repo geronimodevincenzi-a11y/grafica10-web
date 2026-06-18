@@ -182,6 +182,21 @@ img{ max-width: 100%; display:block; }
 .hero .btn-outline{ border-color: var(--color-white); color: var(--color-white); }
 .hero .btn-outline:hover{ background: var(--color-white); color: var(--color-olive-dark); }
 
+/* ===================== BARRA DE CONFIANZA ===================== */
+.trust-bar{
+  background: var(--color-black);
+}
+.trust-bar-inner{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  gap: 28px;
+  padding: 14px 24px;
+  color: var(--color-cream);
+  font-size: .85rem;
+  font-weight: 600;
+}
+
 /* ===================== NOSOTROS ===================== */
 .nosotros{ padding: 80px 0; }
 .nosotros-inner{
@@ -277,6 +292,7 @@ img{ max-width: 100%; display:block; }
 
 /* ===================== COMO FUNCIONA ===================== */
 .como-funciona{ padding: 70px 0; background: var(--color-olive-dark); color: var(--color-white); }
+.como-title{ color: var(--color-white); text-align:center; margin-bottom: 1.2em; }
 .como-grid{
   display:grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -296,6 +312,67 @@ img{ max-width: 100%; display:block; }
 }
 .paso h3{ color: var(--color-white); font-size: 1.05rem; }
 .paso p{ font-size: .88rem; opacity:.85; }
+
+/* ===================== FAQ ===================== */
+.faq{ padding: 80px 0; background: var(--color-cream-dark); }
+.faq-list{ max-width: 720px; margin: 0 auto; display:flex; flex-direction:column; gap: 12px; }
+.faq-item{
+  background: var(--color-white);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+.faq-question{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 14px;
+  padding: 18px 22px;
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--color-olive-dark);
+  text-align:left;
+}
+.faq-icon{
+  flex-shrink:0;
+  font-size: 1.3rem;
+  color: var(--color-orange);
+  transition: transform .2s ease;
+}
+.faq-item.open .faq-icon{ transform: rotate(45deg); }
+.faq-answer{
+  max-height:0;
+  overflow:hidden;
+  transition: max-height .25s ease;
+  padding: 0 22px;
+}
+.faq-item.open .faq-answer{ max-height: 240px; }
+.faq-answer p{ color:#555; font-size:.92rem; padding-bottom: 18px; margin:0; }
+
+/* ===================== BOTÓN FLOTANTE WHATSAPP ===================== */
+.floating-whatsapp{
+  position: fixed;
+  bottom: 22px;
+  right: 22px;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  background: #25D366;
+  color: var(--color-white);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size: 1.6rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,.3);
+  z-index: 80;
+  transition: transform .15s ease;
+}
+.floating-whatsapp:hover{ transform: scale(1.08); }
 
 /* ===================== CONTACTO ===================== */
 .contacto{ padding: 80px 0; }
