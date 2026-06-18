@@ -233,9 +233,10 @@ const COMBOS = [
   },
 ];
 
-// ⚠️ COMPLETAR: Santi tiene que poner su número real (con código de país,
-// sin espacios ni símbolos, ej: "5492346123456") y su dirección/horarios reales.
-const WHATSAPP_NUMBER = "5492346000000"; // TODO: reemplazar por el número real
+// Datos reales tomados del perfil de Instagram @grafica10.indumentaria.
+// Si en algún momento cambian (nuevo número, nueva dirección), alcanza con
+// editar estas líneas — se actualizan solas en todo el sitio.
+const WHATSAPP_NUMBER = "542346529015";
 const INSTAGRAM_URL = "https://www.instagram.com/grafica10.indumentaria/";
-const BUSINESS_ADDRESS = "Chivilcoy, Buenos Aires"; // TODO: dirección exacta
-const BUSINESS_HOURS = "Consultanos por WhatsApp para conocer el horario de atención"; // TODO: horario real
+const BUSINESS_ADDRESS = "Chivilcoy, Buenos Aires";
+const BUSINESS_HOURS = "Consultanos por WhatsApp para conocer el horario de atención";

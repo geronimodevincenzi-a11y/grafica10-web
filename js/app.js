@@ -256,7 +256,21 @@ function initContact() {
   document.getElementById("contactWhatsapp").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
     "Hola! Te escribo desde la web de Gráfica 10."
   )}`;
+  document.getElementById("floatingWhatsapp").href = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+    "Hola! Te escribo desde la web de Gráfica 10."
+  )}`;
   document.getElementById("year").textContent = new Date().getFullYear();
+}
+
+function initFAQ() {
+  document.querySelectorAll(".faq-item").forEach((item) => {
+    const btn = item.querySelector(".faq-question");
+    btn.addEventListener("click", () => {
+      const isOpen = item.classList.contains("open");
+      item.classList.toggle("open", !isOpen);
+      btn.setAttribute("aria-expanded", String(!isOpen));
+    });
+  });
 }
 
 function initNav() {
@@ -292,4 +306,5 @@ document.addEventListener("DOMContentLoaded", () => {
   initNav();
   initCartUI();
   initQuoteModal();
+  initFAQ();
 });
