@@ -1,0 +1,396 @@
+/* =========================================================
+   GRÁFICA 10 INDUMENTARIA — estilos
+   Paleta inspirada en Instagram: verde oliva/negro (degradé de
+   historias), crema (catálogo en Canva), naranja-rojo (logo
+   "Indumentaria" cursiva) y un teal oscuro para acentos.
+   ========================================================= */
+
+:root{
+  --color-cream: #f3efe4;
+  --color-cream-dark: #e9e2d2;
+  --color-black: #1c1c1a;
+  --color-olive: #5b6650;
+  --color-olive-dark: #2f3a28;
+  --color-orange: #e2562f;
+  --color-orange-dark: #c0431f;
+  --color-teal: #285c5c;
+  --color-white: #ffffff;
+  --font-display: "Baloo 2", sans-serif;
+  --font-body: "Poppins", sans-serif;
+  --font-script: "Caveat", cursive;
+  --radius: 14px;
+  --shadow: 0 8px 24px rgba(28,28,26,0.12);
+  --max-width: 1180px;
+}
+
+*{ box-sizing: border-box; }
+html{ scroll-behavior: smooth; }
+body{
+  margin:0;
+  font-family: var(--font-body);
+  color: var(--color-black);
+  background: var(--color-cream);
+  line-height: 1.55;
+}
+h1,h2,h3{
+  font-family: var(--font-display);
+  margin: 0 0 .5em;
+  line-height: 1.15;
+  color: var(--color-olive-dark);
+}
+p{ margin: 0 0 1em; }
+a{ color: inherit; text-decoration: none; }
+ul{ list-style: none; margin:0; padding:0; }
+img{ max-width: 100%; display:block; }
+
+.container{
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+.btn{
+  display: inline-block;
+  font-family: var(--font-body);
+  font-weight: 600;
+  padding: 14px 28px;
+  border-radius: 999px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform .15s ease, box-shadow .15s ease, opacity .15s ease;
+}
+.btn:hover{ transform: translateY(-2px); }
+.btn-primary{
+  background: var(--color-orange);
+  color: var(--color-white);
+  box-shadow: 0 6px 16px rgba(226,86,47,0.35);
+}
+.btn-primary:hover{ background: var(--color-orange-dark); }
+.btn-primary:disabled{
+  opacity: .5;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+.btn-outline{
+  background: transparent;
+  border-color: var(--color-olive-dark);
+  color: var(--color-olive-dark);
+}
+.btn-outline:hover{ background: var(--color-olive-dark); color: var(--color-white); }
+.btn-block{ width: 100%; text-align:center; }
+
+.section-sub{
+  color: #555;
+  margin-top: -6px;
+  margin-bottom: 2em;
+  max-width: 620px;
+}
+
+/* ===================== HEADER ===================== */
+.site-header{
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--color-cream);
+  border-bottom: 3px solid var(--color-olive-dark);
+}
+.header-inner{
+  display:flex;
+  align-items:center;
+  justify-content: space-between;
+  padding: 12px 24px;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap: 10px;
+}
+.logo-10{
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 2.2rem;
+  color: var(--color-black);
+  line-height: 1;
+}
+.logo-text{ display:flex; flex-direction: column; line-height: 1; }
+.logo-grafica{
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: .95rem;
+  letter-spacing: 1px;
+  color: var(--color-black);
+}
+.logo-indumentaria{
+  font-family: var(--font-script);
+  font-weight: 700;
+  font-size: 1.3rem;
+  color: var(--color-orange);
+  margin-top: -2px;
+}
+.main-nav{ display:flex; gap: 28px; font-weight: 600; }
+.main-nav a{ position: relative; padding: 4px 0; }
+.main-nav a:hover{ color: var(--color-orange); }
+.header-actions{ display:flex; align-items:center; gap: 14px; }
+.cart-btn{
+  background: var(--color-olive-dark);
+  color: var(--color-white);
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  font-size: 1rem;
+  cursor: pointer;
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+.cart-count{
+  background: var(--color-orange);
+  border-radius: 999px;
+  padding: 1px 8px;
+  font-size: .8rem;
+  font-weight: 700;
+}
+.nav-toggle{
+  display:none;
+  background:none;
+  border:none;
+  font-size: 1.6rem;
+  cursor:pointer;
+}
+
+/* ===================== HERO ===================== */
+.hero{
+  background: linear-gradient(135deg, var(--color-olive) 0%, var(--color-olive-dark) 55%, var(--color-black) 100%);
+  color: var(--color-white);
+  padding: 100px 0 90px;
+  text-align:center;
+}
+.hero h1{
+  color: var(--color-white);
+  font-size: 3rem;
+  margin-bottom: .4em;
+}
+.hero-sub{
+  max-width: 620px;
+  margin: 0 auto 2em;
+  font-size: 1.1rem;
+  opacity: .92;
+}
+.hero-cta{ display:flex; gap: 16px; justify-content:center; flex-wrap: wrap; }
+.hero .btn-outline{ border-color: var(--color-white); color: var(--color-white); }
+.hero .btn-outline:hover{ background: var(--color-white); color: var(--color-olive-dark); }
+
+/* ===================== NOSOTROS ===================== */
+.nosotros{ padding: 80px 0; }
+.nosotros-inner{
+  display:grid;
+  grid-template-columns: 1.1fr .9fr;
+  gap: 50px;
+  align-items:center;
+}
+.nosotros-badges{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.badge-card{
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 22px 16px;
+  text-align:center;
+  box-shadow: var(--shadow);
+}
+.badge-card span{ font-size: 1.8rem; display:block; margin-bottom: 8px; }
+.badge-card p{ margin:0; font-weight:600; font-size: .92rem; color: var(--color-olive-dark); }
+
+/* ===================== COMBOS ===================== */
+.combos{ padding: 80px 0; background: var(--color-cream-dark); }
+.combo-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+.combo-card{
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 26px;
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction:column;
+  border: 2px solid transparent;
+  transition: border-color .15s ease;
+}
+.combo-card:hover{ border-color: var(--color-orange); }
+.combo-icon{ font-size: 2.4rem; margin-bottom: 10px; }
+.combo-card h3{ font-size: 1.2rem; margin-bottom: 6px; }
+.combo-card .desc{ color:#555; font-size: .92rem; flex-grow:1; }
+.combo-price-row{
+  display:flex;
+  align-items:baseline;
+  justify-content: space-between;
+  margin: 14px 0;
+}
+.combo-price{ font-family: var(--font-display); font-size: 1.5rem; color: var(--color-teal); font-weight:700; }
+.combo-note{ font-size: .78rem; color:#777; }
+.combo-card .btn{ width:100%; text-align:center; }
+
+/* ===================== CATÁLOGO ===================== */
+.catalogo{ padding: 80px 0; }
+.category-tabs{
+  display:flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 36px;
+}
+.tab-btn{
+  background: var(--color-white);
+  border: 2px solid var(--color-olive);
+  color: var(--color-olive-dark);
+  border-radius: 999px;
+  padding: 9px 18px;
+  font-weight:600;
+  font-size: .9rem;
+  cursor:pointer;
+  font-family: var(--font-body);
+}
+.tab-btn.active{ background: var(--color-teal); border-color: var(--color-teal); color: var(--color-white); }
+
+.product-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+.product-card{
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 22px;
+  box-shadow: var(--shadow);
+  display:flex;
+  flex-direction:column;
+}
+.product-icon{ font-size: 2.2rem; margin-bottom: 8px; }
+.product-card h3{ font-size: 1.05rem; margin-bottom: 6px; color: var(--color-olive-dark); }
+.product-card .desc{ color:#555; font-size: .88rem; flex-grow:1; margin-bottom: 14px; }
+.product-card .btn{ font-size: .88rem; padding: 10px 18px; text-align:center; }
+
+/* ===================== COMO FUNCIONA ===================== */
+.como-funciona{ padding: 70px 0; background: var(--color-olive-dark); color: var(--color-white); }
+.como-grid{
+  display:grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 28px;
+  text-align:center;
+}
+.paso-num{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  width: 44px; height:44px;
+  border-radius:50%;
+  background: var(--color-orange);
+  font-family: var(--font-display);
+  font-weight:700;
+  margin-bottom: 12px;
+}
+.paso h3{ color: var(--color-white); font-size: 1.05rem; }
+.paso p{ font-size: .88rem; opacity:.85; }
+
+/* ===================== CONTACTO ===================== */
+.contacto{ padding: 80px 0; }
+.contacto-inner{ max-width: 620px; }
+.contacto-list{ margin: 20px 0; display:flex; flex-direction:column; gap: 10px; }
+.contacto-list a:hover{ color: var(--color-orange); }
+
+/* ===================== FOOTER ===================== */
+.site-footer{ background: var(--color-black); color: var(--color-white); padding: 26px 0; }
+.footer-inner{ display:flex; justify-content:space-between; flex-wrap:wrap; gap:6px; font-size: .85rem; opacity:.85; }
+
+/* ===================== CARRITO (drawer) ===================== */
+.cart-overlay{
+  position:fixed; inset:0;
+  background: rgba(0,0,0,.45);
+  opacity:0; pointer-events:none;
+  transition: opacity .2s ease;
+  z-index: 90;
+}
+.cart-overlay.open{ opacity:1; pointer-events:auto; }
+
+.cart-drawer{
+  position:fixed; top:0; right:0;
+  height:100%; width: 380px; max-width: 92vw;
+  background: var(--color-cream);
+  box-shadow: -8px 0 24px rgba(0,0,0,.2);
+  transform: translateX(100%);
+  transition: transform .25s ease;
+  z-index: 95;
+  display:flex; flex-direction:column;
+}
+.cart-drawer.open{ transform: translateX(0); }
+.cart-drawer-header{
+  display:flex; justify-content:space-between; align-items:center;
+  padding: 20px 22px; border-bottom: 2px solid var(--color-cream-dark);
+}
+.cart-drawer-header h3{ margin:0; }
+.cart-drawer-header button{ background:none; border:none; font-size:1.3rem; cursor:pointer; }
+.cart-items{ flex:1; overflow-y:auto; padding: 16px 22px; }
+.cart-item{
+  display:flex; justify-content:space-between; align-items:flex-start;
+  gap: 10px; padding: 14px 0; border-bottom: 1px solid var(--color-cream-dark);
+}
+.cart-item-name{ font-weight:600; font-size: .92rem; }
+.cart-item-controls{ display:flex; align-items:center; gap:8px; margin-top:6px; }
+.cart-item-controls button{
+  width:24px; height:24px; border-radius:50%; border:1px solid var(--color-olive);
+  background:var(--color-white); cursor:pointer; font-size: .85rem; line-height:1;
+}
+.cart-item-remove{ font-size:.78rem; color: var(--color-orange); cursor:pointer; border:none; background:none; margin-top: 6px; }
+.cart-footer{ padding: 18px 22px; border-top: 2px solid var(--color-cream-dark); }
+.cart-total-row{ display:flex; justify-content:space-between; font-size:1.1rem; margin-bottom: 14px; }
+.cart-empty-msg{ text-align:center; color:#888; font-size:.85rem; margin-top: 10px; }
+
+/* ===================== MODAL ===================== */
+.modal-overlay{
+  position:fixed; inset:0; background: rgba(0,0,0,.5);
+  display:none; align-items:center; justify-content:center;
+  z-index: 100; padding: 20px;
+}
+.modal-overlay.open{ display:flex; }
+.modal{
+  background: var(--color-white);
+  border-radius: var(--radius);
+  padding: 30px;
+  max-width: 460px; width:100%;
+  max-height: 88vh; overflow-y:auto;
+  position: relative;
+}
+.modal-close{
+  position:absolute; top:16px; right:16px;
+  background:none; border:none; font-size:1.3rem; cursor:pointer;
+}
+.field{ display:block; margin-bottom: 14px; font-size:.9rem; font-weight:600; color: var(--color-olive-dark); }
+.field span{ display:block; margin-bottom:6px; }
+.field input, .field select, .field textarea, .quote-option select{
+  width:100%; padding:10px 12px; border-radius:8px; border:1px solid #ccc;
+  font-family: var(--font-body); font-size: .92rem;
+}
+.quote-option{ margin-bottom: 14px; }
+.quote-option label{ display:block; font-size:.9rem; font-weight:600; margin-bottom:6px; color: var(--color-olive-dark); }
+
+/* ===================== RESPONSIVE ===================== */
+@media (max-width: 880px){
+  .nosotros-inner{ grid-template-columns: 1fr; }
+  .main-nav{
+    position:absolute; top:100%; left:0; right:0;
+    background: var(--color-cream);
+    flex-direction:column;
+    padding: 16px 24px;
+    border-bottom: 3px solid var(--color-olive-dark);
+    display:none;
+    gap: 16px;
+  }
+  .main-nav.open{ display:flex; }
+  .nav-toggle{ display:block; }
+  .hero h1{ font-size: 2.2rem; }
+}
