@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://grafica10-web.vercel.app/sitemap.xml
