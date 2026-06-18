@@ -1,0 +1,9 @@
+{
+  "name": "grafica10-web",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Sitio web de Gráfica 10 Indumentaria — catálogo, combos y checkout con Mercado Pago.",
+  "engines": {
+    "node": ">=18"
+  }
+}
